@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact US</title>
+        <link rel=" stylesheet" type="text/css" href="file:///C:/Users/Muqadas/Downloads/fontawesome-free-6.4.0-web%20(2)/fontawesome-free-6.4.0-web/css/all.css">
+        <style>
+            #Main1{
+           
+                width:1395px;
+                height:629px;
+                background-color:#006FBF;
+               
+            }
+            
+            #Main{
+                background-color:#ffffff;
+                transition:300ms;
+                width:490px;
+                height:510px;
+                margin-left: 790px;
+                margin-top: -614px;
+                padding-top:90px;
+               
+            }
+            #Main2{
+                background-image: url("r1.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width:500px;
+                height:300px;
+                margin-left: 100px;
+                padding: 20px;
+                display: block;
+                margin-top: -530px;
+                cursor: pointer;
+                animation:slider 9s infinite linear; 
+               
+            }
+            @keyframes slider{
+                0%{background-image: url("join.jpg");}
+
+
+                35%{background-image: url("be.jpg");}
+
+                75%{background-image:url("r.jpg");}
+
+                85%{background-image:url("r2.jpg");}
+
+                85%{background-image:url("r3.jpg");}
+
+                85%{background-image:url("r5.jpg");}
+
+            }
+
+
+
+
+
+            #Header{
+                width:350px;
+                height:50px;
+                background-color:white;
+                margin-left: 740px;
+                
+            }
+            .form_control{
+                margin-top: -20px;
+                margin-bottom: 20px;
+                position: relative;
+                
+                
+            }
+           
+            .form_control label{
+                display: inline-block;
+                margin-bottom: 5px;
+
+            }
+            .form_control input{
+                width:50%;
+                border:2px solid;
+                border-radius: 5px;
+                
+            }
+            
+
+            .form_control input:focus{
+               
+               outline: 0;
+               border-color:rgb(255, 183, 0);
+            
+           }
+           #button{
+                margin-left: 350px;
+                margin-top: -190px;
+                background-color:#e7c641;
+                color:white;
+                font-size: 20px;
+                font-size: bold;
+                padding: 15px;
+                width:70px;
+                border-radius: 5px;
+                border:none;
+
+
+            }
+            
+
+
+            #button:hover{
+                background-color: white;
+                color:purple;
+                border-color:purple;
+              border:2px solid
+               
+            }
+           
+
+
+            
+            
+
+           
+        </style>
+    </head>
+  
+    <body>
+        
+        <div id="Main1"></div>
+       
+        <div id="Main">
+            
+            <h4 style="margin-top: -70px;margin-left: 20px;font-size: 45px;text-align: center;color:#e7c641;">HostGator Portal</h4>
+            <h2 style="color:#e7c641;text-align: center;margin-top: -50px;font-weight: 600;">Sign up</h2>
+            <div class="form" id="form">
+                <div class="form_control">
+                    <br>
+                    <label id="uname" style="margin-left: 10px;">UserName</label><span id="symbol" style="font-weight: 20;"><br>
+                    
+                    <input type="text" autocomplete="off" id="username" name="" placeholder="Please enter your name" style="margin-top:-5px;margin-left: 10px;height:20px;">  
+                    <span id="UserName_error"></span>
+                </div>
+               
+                <br>
+               
+
+                <div class="form_control">
+                    <label id="email_label" style="margin-left: 10px;margin-top:-50px;">Email</label><br>
+                    <input type="email" id="email_field" spellcheck="=false" name="" placeholder="Enter Your Email" style="margin-left: 10px;height:20px;" onkeyup="validateEmail()">
+                    <span id="email_error"></span>
+                </div>
+                <br>
+               
+               
+
+
+                <div class="form_control">
+                    <label id="mobile" style="margin-left: 10px;margin-top: -50px;">Mobile</label><br>
+                    <input type="text"  spellcheck="false" id="m_number" name="" placeholder="Enter Your phone_Num" style="margin-left: 10px;height:20px;" onchange="validateMbl()">
+                    <span id="Mobile_error" style="margin-top: -5px;"></span>
+                </div>
+                <br>
+
+                <div class="form_control">
+                    <label id="CNIC" style="margin-left: 10px;margin-top: -50px;">CNIC[with_dashes]</label><br>
+                    <input type="number" id="cnic" name="" placeholder="Enter Your CNIC" style="margin-left: 10px;height:20px;">
+                    <span id="CNIC_error" style="margin-top: -5px;"></span>
+                </div>
+                <br>
+
+                <div class="form_control">
+                    <label id="password_label" style="margin-left: 10px;margin-top: -50px;">Password</label><br>
+                    <input type="password" id="pass" value="" name="" placeholder="Enter Your Password" style="margin-left: 10px;height:20px;" onchange="passvalidate()">
+                    <span id="Password_error" style="margin-top: -5px;"></span>
+                </div>
+                <br>
+
+                <div class="form_control">
+                    <label id="c_password" style="margin-left: 10px;margin-top: -50px;">Confirm_Password</label><br>
+                    <input type="password"  id="cpass" value="" name="" placeholder="Enter Your Password again" style="margin-left: 10px;height:20px;" onchange="passvalidate()">
+                    <span id="Confirm_Password_error" style="margin-top: -5px;"></span>
+                </div>
+                <br>
+               
+                <input id="button" value="Submit" onclick="myfun()" >
+    
+    <h4 style="margin-left: 20px;margin-top: -24px;color:#e7c641;">If you already register please login here</h4>
+
+</div>
+
+            </div>
+        </div>
+        <div id="Main2"></div>
+        <h2 style="margin-top: 20px;margin-left: 230px;color:#e7c641;font-size: 25px;">Account Registration </h2>
+            <h4 style="margin-top: 20px;margin-left: 230px;color:#e7c641;font-size: 25px;">Contact:(866)96-GATOR</h4>
+            <h4 style="margin-top: 20px;margin-left: 230px;color:#e7c641;font-size: 20px;">Timing:24 Hours Availble</h4>
+        
+        
+        <script type="text/javascript">
+           
+           function myfun()
+            {
+                var UserName=document.getElementById("username");
+                var UserName_error=document.getElementById("UserName_error");
+
+
+                if (UserName.value=='') {
+                    UserName_error.innerHTML='**Kindly enter your name'
+                    UserName_error.style.color='red'
+                   
+            }
+            else{
+                UserName_error.innerHTML=""
+                }
+
+                // Email//
+                var email=document.getElementById("email_field");
+                var email_error=document.getElementById("email_error");
+
+
+                if (email.value=='') {
+                    email_error.innerHTML='**Kindly enter your Email'
+                    email_error.style.color='red'
+            }
+            else{
+                email_error.innerHTML=""
+                }
+
+
+                //Phone//
+
+                var Mobile=document.getElementById("m_number");
+                var  Mobile_error=document.getElementById("Mobile_error");
+
+
+                if ( Mobile.value=='') {
+                    Mobile_error.innerHTML='**Kindly enter your Number'
+                    Mobile_error.style.color='red'
+            }
+            else{
+                Mobile_error.innerHTML=""
+                }
+
+                // CNIC//
+                var CNIC=document.getElementById("cnic");
+                var CNIC_error=document.getElementById("CNIC_error");
+
+
+                if (CNIC.value=='') {
+                    CNIC_error.innerHTML='**Kindly enter your CNIC'
+                    CNIC_error.style.color='red'
+            }
+            else{
+                CNIC_error.innerHTML=""
+                } 
+                //Passowrd//
+
+                var Password=document.getElementById("pass");
+                var  Password_error=document.getElementById("Password_error");
+
+
+                if ( Password.value=='') {
+                    Password_error.innerHTML='**Kindly enter your Passowrd'
+                    Password_error.style.color='red'
+            }
+            else{
+                Password_error.innerHTML=""
+                } 
+
+                //Confirm password//
+                var Confirm_Password=document.getElementById("cpass");
+                var Confirm_Password_error=document.getElementById("Confirm_Password_error");
+
+
+                if ( Confirm_Password.value=='') {
+                    Confirm_Password_error.innerHTML='**Kindly check your Passowrd'
+                    Confirm_Password_error.style.color='red'
+            }
+            else{
+                Confirm_Password_error.innerHTML=""
+                } 
+            
+
+
+
+
+
+
+               
+
+            }
+            //Validation On Email
+            var email_field=document.getElementById("email_field");
+            var email_label=document.getElementById("email_label");
+            email_error=document.getElementById("email_error");
+    
+            function validateEmail()
+            {
+             if(!email_field.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/))
+             {
+                email_error.innerHTML="**plz enter valid email";
+                email_field.style.background='green';
+                return false;  
+             }
+             email_error.innerHTML="";
+             email_field.style.background='red';
+             email_field.style.color='white';
+
+             return true;
+             
+            }
+
+            //Validation on Mobile Number//
+
+            function validateMbl()
+            {
+                var mobile=document.getElementById("m_number").value;
+                var mobileexp=/^\d{10}$/;
+
+                if( mobile.match(mobileexp))
+                {
+                    alert('Valid Mobile Number')
+                    
+                 return true;
+                }
+                else{
+                    alert('Invalid Mobile number');
+                    return false;
+                }
+            }
+
+             //Validation on Password//
+
+             function passvalidate()
+            {
+                var a=document.getElementById("pass").value;
+                var b=document.getElementById("cpass").value;
+
+
+                if(a=="")
+                {
+                    document.getElementById("Password_error").innerHTML="plz fill password";
+                   
+                    return false;
+                }
+               /* if(a.length<5)
+                {
+                    document.getElementById("Password_error").innerHTML="Password length must be greater than 5 characters";
+                    return false;
+                }
+
+                if(a.length>10)
+                {
+                    document.getElementById("Password_error").innerHTML="Password length must be smaller than 10 characters";
+                
+                    
+                    return false;
+                }*/
+                if(a!=b)
+                {
+                   alert('password are  not same');
+                    return false;
+                }
+                else{
+                    alert('Password are same')
+                }
+                
+               
+               
+                
+               
+            }
+
+        </script>
+ 
+    </body>
+</html>
